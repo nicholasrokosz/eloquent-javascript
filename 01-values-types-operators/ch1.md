@@ -18,7 +18,7 @@
 - `null` and `undefined` are mostly interchangable
 - use `===` instead of `==` to avoid unexpected type conversions
 - short circuit evaluation:
-   ```
+   ``` javascript
     console.log(null || 'user')
     // -> user
     console.log(null && 'user')

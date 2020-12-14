@@ -4,7 +4,7 @@
 
 This chapter taught you how to write your own functions. The function keyword, when used as an expression, can create a function value. When used as a statement, it can be used to declare a binding and give it a function as its value. Arrow functions are yet another way to create functions.
 
-```
+``` javascript
 // Define f to hold a function value
 const f = function(a) {
   console.log(a + 2);
@@ -40,7 +40,7 @@ Separating the tasks your program performs into different functions is helpful. 
   - each local scope can also see all the local scopes that contain it, & all scopes can see the global scope — this approach to binding visibility is called **lexical scoping**
 
 - declaration notation
-    ```
+    ``` javascript
     function square(x) {
       return x * x;
     };
@@ -62,7 +62,7 @@ Separating the tasks your program performs into different functions is helpful. 
   - if you pass too few arguments, the missing parameters get assigned the value `undefined`
   
   - e.g. this minus function tries to imitate the `-` operator by acting on either one or two arguments:
-    ```
+    ``` javascript
     function minus(a, b) {
       if (b === undefined) return -a;
       else return a - b;
@@ -75,7 +75,7 @@ Separating the tasks your program performs into different functions is helpful. 
   
   - a function that references bindings from local scopes around it is called **a closure**
   - e.g.
-    ```
+    ``` javascript
     function multiplier(factor) {
       return number => number * factor;
     }
@@ -95,7 +95,7 @@ Separating the tasks your program performs into different functions is helpful. 
   - worrying about efficiency can be a distraction — always start by writing something that’s correct & easy to understand
   - recursion is best for problems that require exploring or processing several “branches”, each of which might branch out again into even more branches
   - e.g.
-    ```
+    ``` javascript
     function findSolution(target) {
       function find(current, history) {
         if (current == target) {
